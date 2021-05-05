@@ -7,15 +7,15 @@ import time
 
 #define values
 PWM_PIN = 18
-SPEED_SENSE_PIN = 17
-SAFETY_SENSE_PIN = 27
+#SPEED_SENSE_PIN = 17
+#SAFETY_SENSE_PIN = 27
 INCLINE_UP_PIN = 20
 INCLINE_DOWN_PIN = 21
-INCLINE_SENSE_PIN = 16
-speed = 0
-Hour = 0
-Minute = 0
-Second = 0
+#INCLINE_SENSE_PIN = 16
+speed = 0   #run speed
+Hour = 0    #run timer Hour
+Minute = 0  #run timer Minute
+Second = 0  #run timer Second
 isStart = False
 MULTIPLY = 7
 DISTANCE = 0
@@ -23,6 +23,7 @@ tiktok = False
 BTN_font_size = 20
 #end of define values
 
+#control run speed
 def set_speed(sp):
     global speed
     prev_speed = speed
@@ -57,7 +58,7 @@ def start_run():
         B_start.repeat(500, timer)
     else:
         pass
-        
+
 def stop_run():
     global speed
     speed = 0
@@ -118,14 +119,14 @@ def timer():
     if Minute % 60 == 0 and Minute != 0:
         Hour += 1
     text_time.value = str(Hour) + " h:" + str(Minute) + " m:" + str(Second) + " s"
-    
+
     if Hour > 24:
         text_time.value = "You Run Over 24HR WTF?"
-    
+
     DISTANCE += (speed * 700)/60/60
     output_speed = f"{DISTANCE:.1f}"
     text_distance.value = str(output_speed) + " m"
-    
+
     tiktok = not tiktok
 #def shutdown()
 #def readSpeedFrequency()
