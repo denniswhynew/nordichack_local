@@ -21,7 +21,7 @@ sudo pip3 install guizero
 ```
 Then you can run controller:
 
-#Start Nordichack
+##Start Nordichack
 
 Please make sure `start_run.sh` and `gui.py` is in the same directory.
 And than double click `gui.py`.
