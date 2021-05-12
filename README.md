@@ -4,14 +4,17 @@ This project is a more complete an easy version of [Nordichack](https://github.c
 And completed incline up/down function.
 
 ##Hardware and Components
+
 ![Schematic](schematic/treadmill_schematic.png)
 
 The schematic can be edited in [Fritzing](http://fritzing.org/home/).
 
 ##Controller and GUI
+
 The controller and interface present program is written in python.
 
 ##Installing
+
 First, download this repo.
 Install the required dependencies:
 ```
@@ -22,5 +25,6 @@ sudo pip3 install guizero
 Then you can run controller:
 
 ##Start Nordichack
+
 Please make sure `start_run.sh` and `gui.py` is in the same directory.
 Then double click `gui.py`, and you are good to go.
